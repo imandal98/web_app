@@ -6,16 +6,20 @@ import Footer from "./Sections/Footer/Footer";
 import Category from "./Sections/Category/Category";
 import Product_info from "./Sections/Product_info/Product_info";
 import Home from "./Sections/Home/Home";
+import Appcontext from "./contex/contex";
+
 function App() {
   return (
     <BrowserRouter>
+    <Appcontext>
       <Header/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/product/:id" element={<Product_info/>}/>
-        <Route path="/category/:id" element={<Category/>}/>
-      </Routes>
-      <Footer/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/product/:id" element={<Product_info/>}/>
+          <Route path="/category/:id" element={<Category/>}/>
+        </Routes>
+        <Footer/>
+    </Appcontext>
     </BrowserRouter>
   );
 }

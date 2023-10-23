@@ -1,12 +1,8 @@
-import {createContext} from "react";
-export const context = createContext();
+import {createContext, useState} from "react";
+export const Context = createContext();
 
-const appcontxt =({child}) => {
-    return (
-        <context.Provider>
-            {child}
-        </context.Provider>
-    )
+const appcontxt =({children}) => {
+    return <Context.Provider> {children} </Context.Provider>
 };
 
 export default appcontxt;
